@@ -1,0 +1,17 @@
+﻿<Page x:Class="Oasis.Pages.CheckUpdates"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pages"
+      xmlns:mp="http://schemas.mpcoding.com/mpcoding/wpf/loadinganimation"
+      mc:Ignorable="d" 
+      Height="750" Width="1300">
+
+    <Grid>
+        <Viewbox Width="45" Height="10" Margin="0,70,0,0">
+            <mp:ThreeDotsAnimation Color="White" Duration="0:0:0.8"/>
+        </Viewbox>
+        <TextBlock Name="StatusText" Text="Checking for updates..." Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="pack://application:,,,/src/Fonts/#Bricolage Grotesque 14pt ExtraL"/>
+    </Grid>
+</Page>

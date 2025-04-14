@@ -1,0 +1,42 @@
+﻿<Page x:Class="Pages.StorePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Pages"
+      mc:Ignorable="d" 
+      Height="750" Width="1120">
+    <Grid>
+        <Image Source="pack://application:,,,/src/images/OutOfOrder.png" Width="450" Height="550" Margin="0,0,0,0"/>
+        <TextBlock Text="Coming Soon"
+           FontSize="48"
+           FontWeight="Bold"
+           Margin="0,315,0,0"
+           FontFamily="pack://application:,,,/src/Fonts/#Burbank Big Cd Bk"
+           HorizontalAlignment="Center"
+           VerticalAlignment="Center"
+           Foreground="White">
+
+            <TextBlock.Effect>
+                <DropShadowEffect x:Name="textShadow"
+                          ShadowDepth="4"
+                          Color="Black"
+                          BlurRadius="2"
+                          Opacity="1"/>
+            </TextBlock.Effect>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                            <ColorAnimation Storyboard.TargetName="textShadow"
+                                    Storyboard.TargetProperty="Color"
+                                    From="Black"
+                                    To="#ffaf00"
+                                    Duration="0:0:1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+    </Grid>
+</Page>

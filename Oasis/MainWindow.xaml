@@ -1,0 +1,90 @@
+﻿<Window x:Class="Oasis.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oasis"
+        mc:Ignorable="d"
+        Title="Oasis" Height="750" Width="1300" ResizeMode="NoResize" Background="#1a1a1a" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="WindowStyle" TargetType="Window">
+                <Setter Property="WindowChrome.WindowChrome">
+                    <Setter.Value>
+                        <WindowChrome CaptionHeight="0"
+                              CornerRadius="15"
+                              GlassFrameThickness="0"
+                              NonClientFrameEdges="None"
+                              ResizeBorderThickness="3"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Window.Resources>
+
+    <Window.Style>
+        <StaticResource ResourceKey="WindowStyle"/>
+    </Window.Style>
+
+    <Grid ClipToBounds="True" Name="MainGrid">
+        <Image Name="BackgroundLogin" Source="pack://application:,,,/src/images/fort.png" Height="750" Width="1920" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DockPanel Background="Black" Opacity="0.7"/>
+        <Frame Name="PageNavigation" NavigationUIVisibility="Hidden" Grid.Row="0"/>
+
+        <DockPanel Height="35" Background="Transparent" VerticalAlignment="Top" MouseLeftButtonDown="DragMoveDock"/>
+
+        <Button Width="10" Height="10" Background="Transparent" Margin="1235,-705,0,0" BorderBrush="Transparent" Cursor="Hand" Click="Close_Click" Grid.Row="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Image x:Name="NormalImage" Source="pack://application:,,,/src/images/ButtonIcons/close.png" Visibility="Visible"/>
+                        <Image x:Name="HoverImage" Source="pack://application:,,,/src/images/ButtonIcons/closehover.png" Visibility="Collapsed"/>
+                        <Image x:Name="PressedImage" Source="pack://application:,,,/src/images/ButtonIcons/closeclick.png" Visibility="Collapsed"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="NormalImage" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="HoverImage" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="HoverImage" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PressedImage" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="PressedImage" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Width="10" Height="10" Background="Transparent" Margin="1155,-705,0,0" BorderBrush="Transparent" Cursor="Hand" Click="Min_Click" Grid.Row="1">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Image x:Name="NormalImage" Source="pack://application:,,,/src/images/ButtonIcons/minimize.png" Visibility="Visible"/>
+                        <Image x:Name="HoverImage" Source="pack://application:,,,/src/images/ButtonIcons/minimizehover.png" Visibility="Collapsed"/>
+                        <Image x:Name="PressedImage" Source="pack://application:,,,/src/images/ButtonIcons/minclick.png" Visibility="Collapsed"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="NormalImage" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="HoverImage" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="HoverImage" Property="Visibility" Value="Collapsed" />
+                            <Setter TargetName="PressedImage" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="False">
+                            <Setter TargetName="PressedImage" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <DockPanel Name="FlashBang" Background="White" Opacity="0" IsHitTestVisible="False"/>
+        <Image Name="Sevander" Source="pack://application:,,,/src/images/Sevander.png" Opacity="0" Stretch="Fill" IsHitTestVisible="False"/>
+        <MediaElement Name="audioPlayer" LoadedBehavior="Manual" UnloadedBehavior="Manual" Visibility="Collapsed"/>
+        <MediaElement Name="violinPlayer" LoadedBehavior="Manual" UnloadedBehavior="Manual" Visibility="Collapsed"/>
+    </Grid>
+</Window>

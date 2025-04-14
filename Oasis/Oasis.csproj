@@ -1,0 +1,167 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>src\images\SkibidiIco.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>Stella</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Class\Roles.json" />
+    <None Remove="src\Fonts\BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf" />
+    <None Remove="src\Fonts\BurbankBigCondensed-Black.otf" />
+    <None Remove="src\images\81VoPo+3L2L.jpg" />
+    <None Remove="src\images\ButtonIcons\close.png" />
+    <None Remove="src\images\ButtonIcons\closeclick.png" />
+    <None Remove="src\images\ButtonIcons\closehover.png" />
+    <None Remove="src\images\ButtonIcons\Fortnite.png" />
+    <None Remove="src\images\ButtonIcons\Home.png" />
+    <None Remove="src\images\ButtonIcons\minclick.png" />
+    <None Remove="src\images\ButtonIcons\minimize.png" />
+    <None Remove="src\images\ButtonIcons\minimizehover.png" />
+    <None Remove="src\images\ButtonIcons\Store.png" />
+    <None Remove="src\images\ButtonIcons\YouTubeSocial.png" />
+    <None Remove="src\images\ButtonIcons\YouTubeSocialClick.png" />
+    <None Remove="src\images\ButtonIcons\YouTubeSocialHover.png" />
+    <None Remove="src\images\close.png" />
+    <None Remove="src\images\fort.png" />
+    <None Remove="src\images\minimize.png" />
+    <None Remove="src\images\olo.png" />
+    <None Remove="src\images\OutOfOrder.png" />
+    <None Remove="src\images\RoleBadges\Deluxe.png" />
+    <None Remove="src\images\RoleBadges\Founder.png" />
+    <None Remove="src\images\RoleBadges\Member.png" />
+    <None Remove="src\images\RoleBadges\Owner.png" />
+    <None Remove="src\images\RoleBadges\Staff.png" />
+    <None Remove="src\images\RoleBadges\Starter.png" />
+    <None Remove="src\images\RoleBadges\Trusted.png" />
+    <None Remove="src\images\SkibidiToilet.png" />
+    <None Remove="src\images\SkibidiToiletSideways.png" />
+    <None Remove="src\images\yuh.png" />
+    <None Remove="src\Sounds\flashbang.mp3" />
+    <None Remove="src\Sounds\videoplayback.mp3" />
+    <None Remove="src\Sounds\violin.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="src\images\SkibidiIco.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Class\Roles.json">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\Fonts\BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\Fonts\BurbankBigCondensed-Black.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\81VoPo+3L2L.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\closeclick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\closehover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\Fortnite.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\minclick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\minimize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\minimizehover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\Store.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\YouTubeSocial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\YouTubeSocialClick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\ButtonIcons\YouTubeSocialHover.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\fort.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\olo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\OutOfOrder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Deluxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Founder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Member.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Owner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Starter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\RoleBadges\Trusted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\SkibidiToilet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\SkibidiToiletSideways.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\images\yuh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\Sounds\flashbang.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\Sounds\videoplayback.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="src\Sounds\violin.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1343.22" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="9.0.1" />
+    <PackageReference Include="MpCoding.WPF.LoadingAnimations" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="WindowsAPICodePack-Core" Version="1.1.2" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+</Project>
