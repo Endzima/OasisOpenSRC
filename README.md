@@ -1,0 +1,1 @@
+The Oasis launcher, also got some random code in it from some other guy I think but ion even remember bro I ain't touched it in ages, I will add more forks and different versions of this launcher to this repo as I shared it with some people and might aswell slap their copies on here too.
